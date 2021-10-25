@@ -9,43 +9,43 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>server</title>
+</head>
+
+<body class="bg-secondary">
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="./js/home.js"></script>
-    <link rel="stylesheet" href="./css/home.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-</head>
-
-<body>
-    <div class="container shadow-lg p-5">
-
-        <form action="http://localhost:9090" method="post" class=" mb-5 container">
-            <label class="alert">Please enter eight character for set on server :</label>
-            <input type="text" name="set" id="" class="form-control inputUser " id='setInput' placeholder="Enter text ..." onkeyup=" ">
-            <div class="mt-2 ">
-                <input type="submit " value="submit with go " class="btn btn-success btn-block ">
-                <input type="submit " value="submit with node js " class="btn btn-success btn-block ">
-                <input type="submit " value="submit with php " class="btn btn-success btn-block ">
+    <center class="container bg-dark mt-5 pt-4 pb-3 w-50 shadow-lg ">
+        <form action="http://localhost:2060/post" method="post">
+            <p class="text-white">Enter a text for insert to database</p>
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="">
             </div>
-            <label id="check "></label>
-        </form>
+            <input type="submit" value="go lang" class="btn btn-success btn-block">
+            <input type="submit" value="node js" class="btn btn-success btn-block">
 
-        <form action=" " method="get " class=" mt-5 mb-3 container ">
-            <label class="alert ">Please enter string for get from server :</label>
-            <input type="text " name="get " id=" " class="form-control inputUser  " placeholder="Enter text ... ">
-            <div class="mt-2 ">
-                <input type="button " value="get with go " class="btn btn-success btn-block ">
-                <input type="button " value="get with node js " class="btn btn-success btn-block ">
-                <input type="button " value="get with php " class="btn btn-success btn-block ">
-            </div>
 
         </form>
+    </center>
 
-    </div>
+
+    <center class="container bg-dark mt-5 pt-4 pb-3 w-50 shadow-lg">
+
+        <p class="text-white">Get text with hash code</p>
+        <form action="http://localhost:2060/get" method="get">
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="">
+            </div>
+            <input type="submit" value="go lang" class="btn btn-success btn-block">
+            <input type="submit" value="node js" class="btn btn-success btn-block">
+
+        </form>
+    </center>
+
 
 </body>
 
